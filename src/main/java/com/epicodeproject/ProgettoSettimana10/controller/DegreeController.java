@@ -59,13 +59,14 @@ public class DegreeController {
         DummyDb db =  ctx.getBean(DummyDb.class);
         if(res.hasErrors()){
             model.addAttribute("degree",d);
-            return "updateDegree/"+d.getCode();
+            return "addDegree";
         }
         db.updateDegree(id, d);
         log.info(db.getStudents().toString());
         model.addAttribute("degrees", db.getDegrees());
         return "redirect:/degree/view";
     }
+
 
     @GetMapping("/view")
     public String getDegreeList(Model model) {

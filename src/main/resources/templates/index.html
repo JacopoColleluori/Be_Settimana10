@@ -7,8 +7,11 @@
 </head>
 
 
-<body class="container bg-dark text-light text-center">
-<header ><h1>Atlantid University Home</h1></header>
+<body class="container  text-center">
+
+    <h1>Atlantid University Home</h1> <br>
+    <button id="DarkMode" class="btn" onclick="darkMode()">Dark Mode</button>
+
 <div class="container d-flex flex-row justify-content-evenly mt-5 pt-5">
 <a href="/student/view" class="btn btn-primary h2">Student Management</a> <br>
 <a href="/degree/view" class="btn btn-success h2">Degrees Management</a>
@@ -16,9 +19,19 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 <footer class="fixed-bottom">
     <h5 class="h5">Powered By JC Studio</h5></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        function darkMode(){
+   var x= document.body;
+   x.classList.toggle("bg-dark")
+   x.classList.toggle("text-light");
+   var button=document.getElementById("DarkMode");
+   button.classList.toggle("text-light");
+   }
+    </script>
 </body>
 
 
